@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import '../styles/App.css';
+import '../styles/Child.css';
 import Selection from './Selection';
 import ColourSelector from './ColourSelector';
 
@@ -24,10 +25,15 @@ const colourConfig = [{
 const title = 'Select the gradient and then the Box to change the color';
 
 const App = () => {
+  
   let [nextBackground, selectNextBackground] = useState({ background: "" })
+  //const [selectedColor, setSelectedColor] = useState("");
+  
+  //const applyColor = (updateSelectionStyle) => {
+    //  updateSelectionStyle(selectedColor );
+  //}
   const applyColor = (updateSelectionStyle) => {
-    //updateSelectionStyle(nextBackground)
-    updateSelectionStyle({ background: selectedColor });
+        updateSelectionStyle(nextBackground)
   }
 
   return (
